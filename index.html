@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RPG game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN / CHARACTER CREATION -->
+  <div id="login-screen" class="screen active">
+      <h1>Dungeons, Dungeons and More Dungeons</h1>
+
+      <label>
+          Name:
+          <input id="name-input" type="text">
+      </label>
+
+      <label>
+          Class:
+          <select id="class-select">
+              <option value="warrior">Warrior</option>
+              <option value="scout">Scout</option>
+              <option value="engineer">Engineer</option>
+              <option value="doctor">Doctor</option>
+          </select>
+      </label>
+
+      <button id="start-btn">Start</button>
+  </div>
+  <!-- GAME MAIN SCREEN -->
+  <div id="game-screen" class="screen">
+      <div id="stats-bar">
+          <span>ATK: <span id="atk-stat"></span></span>
+          <span>HP: <span id="hp-stat"></span></span>
+          <span>Cash: $<span id="cash-stat"></span></span>
+      </div>
+
+      <div id="log">
+          <p>Welcome to the world.</p>
+      </div>
+
+      <div id="actions">
+          <button id="exploreBtn">Explore</button>
+          <button id="inventoryBtn">Inventory</button>
+          <button id="dungeonBtn">Dungeon</button>
+      </div>
+  </div>
+
+  <!-- INVENTORY SCREEN -->
+  <div id="inventory-screen" class="screen">
+      <div id="craft-bar">
+          <span><button class="back-btn">Go back</button></span>
+          <span>Inventory</span>
+      </div>
+
+      <div id="inventory-list">
+          <p>You have no items. Start exploring to get more!</p>
+      </div>
+      <label>
+        <select id="equip-select">
+
+        </select>
+      </label>
+
+      <label>
+        <select id="use-select">
+
+        </select>
+      </label>
+
+      <button id="craftBtn">Craft</button>
+  </div>
+
+
+
+  <!-- Data -->
+  <script src="data/areas.js"></script>
+  <script src="data/enemies.js"></script>
+  <script src="data/player.js"></script>
+  <script src="data/recipes.js"></script>
+
+  <!-- Systems -->
+  <script src="systems/combat.js"></script>
+  <script src="systems/crafting.js"></script>
+  <script src="systems/inventory.js"></script>
+  <script src="systems/progression.js"></script>
+
+  <!-- UI -->
+  <script src="ui/buttons.js"></script>
+  <script src="ui/helpers.js"></script>
+  <script src="ui/events.js"></script>
+
+  <!-- Utils -->
+  <script src="utils/random.js"></script>
+
+  <!-- Main (ALWAYS LAST) -->
+  <script src="main.js"></script>
+
+</body>
+</html>
